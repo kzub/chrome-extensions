@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv=Content-Type content="text/html;charset=UTF-8">
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        /*background-image: url("man.jpg");*/
+        /*background-image: url("pic2.jpg");*/
+      }
+
+      #hours, #minutes, #seconds, .separator {
+        font-size: 200px;
+        line-height: 200px;
+        color: white;
+        font-family: "Arial"
+      }
+
+      .card {
+        background: black;
+        width: 280px;
+        height: 200px;
+        border-radius: 10px;
+        float: left;
+        margin: 0 2px;
+      }
+
+      .clock {
+        /*position: fixed;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        position: absolute;
+        top: 760px;
+        left: 1320px;
+        transform: translate(-50%, -50%);
+        width: 900px
+      }
+
+      .silent-text{
+        font-size: 140px;
+        margin: 50px 0 600px 0;
+        font-family: "Arial";
+        position: absolute;
+        left: 800px;
+        top: 400px;
+        border-radius: 10px;
+        padding: 10px 40px;
+      }
+    </style>
+
+    <script src="timer.js"></script>
+  </head>
+  <body id="body">
+    <center class="silent-text">Время тишины</center>
+    <center>
+      <div class="clock"> 
+        <div class="card"><center> <span id="hours">--</span> </center></div> 
+        <div class="card"><center> <span id="minutes">--</span> </center></div> 
+        <div class="card"><center> <span id="seconds">--</span> </center></div> 
+      </div>
+    </center>
+  </body>
+</html>
+

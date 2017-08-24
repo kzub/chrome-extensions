@@ -38,6 +38,13 @@ function stop(windowId) {
 // Switch to the next tab.
 function activateTab(nextTab) {
 	grabTabSettings(nextTab.windowId, nextTab, function(tabSetting){
+		if(nextTab.url.indexOf('devanswers.ru') > -1){
+			chrome.tabs.update(nextTab.id, { selected: true, url : 'http://devanswers.ru/' }, function(){
+				setMoverTimeout(tabSetting.windowId, 180);
+			});
+			return;
+		}
+
 		if(tabSetting.reload && !include(settings.noRefreshList, nextTab.url) && nextTab.url.substring(0,19) != "chrome://extensions"){
 			chrome.tabs.reload(nextTab.id, function(){
 				chrome.tabs.update(nextTab.id, {selected: true}, function(){
