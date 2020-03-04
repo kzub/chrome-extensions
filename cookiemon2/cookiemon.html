@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<script src="cookiemon.js">
+		</script>
+		<style>
+			.heading {
+				font-size: 20px;
+				font-weight: bold;
+				padding-top: 15px;
+			}
+			
+			.eachdiv {
+				font-size: 16px;
+				padding: 20 0 20 0;
+			}
+			
+			.leftInput {
+				text-align: right;
+				padding: 20 5 0 0;
+			}
+			
+			.rightInput {
+				text-align: left;
+				padding: 20 0 0 5;
+			}
+
+			.columnHead {
+				font-weight: bold;
+				text-align: center;
+			}
+			
+			.textBox {
+				width: 250px;
+				height: 30px;
+				padding-left: 5px;
+				margin-left: 5px;
+			}
+		</style>
+	</head>
+	<body style="margin: 25px;">
+		<div class="heading">
+			Cookie Monitor
+		</div>
+		<table class="eachdiv" rows="2" cols="3">
+			<form name="cookiemon_addpairfrm" id="cookiemon_addpairfrm" method="POST">
+				<tr>
+					<td class="rightInput">Cookie Domain </td>
+					<td class="rightInput">:<input type="text" name="cookiedomain" size="30" placeholder="Enter cookie domain / regex to monitor" class="textBox"/></td>
+				</tr>
+				<tr>
+                                        <td class="rightInput">Cookie Name </td>
+                                        <td class="rightInput" colspan="2">:<input type="text" name="cookiename" size="30" placeholder="Enter cookie name / regex to monitor" class="textBox"/></td>
+                                </tr>
+				<tr>
+                                        <td class="rightInput">Cookie Value </td>
+                                        <td class="rightInput" colspan="2">:<input type="text" name="cookievalue" size="30" placeholder="Enter cookie value / regex to monitor" class="textBox"/></td>
+                                 	<td class="rightInput"><input type="submit" name="cookiemon_addpairsub" value="Monitor It"/></td>
+				</tr>
+			</form>
+		</table>
+		
+		<div class="heading">
+			Cookie Pair Manage:
+		</div>
+		
+		<div id="cookiemon_deletepairs" class="eachdiv">		
+			<div id="cookiemon_deletepair" class="eachdiv">
+			</div>
+		</div>
+
+		<div class="eachdiv" id="showalldiv">
+			<a href="javascript:void(0)" id="showall">Show History</a>
+		</div>
+
+		<div class="eachdiv" id="cmhistory" style="display:none;">
+			<a href="javascript:void(0)" id="hideall">Hide History</a>&nbsp;&nbsp;<a href="javascript:void(0)" id="flushall">Flush All</a>
+			<table cols="5" border="1" id="cmhistorytable">
+                                <tr>
+                                        <td class="columnHead">Added / Modified Date</td>
+                                        <td class="columnHead">Name</td>
+                                        <td class="columnHead">Value</td>
+                                        <td class="columnHead">Domain</td>
+                                        <td class="columnHead">Data</td>
+                                </tr>
+                	</table>
+		</div>
+	</body>
+</html>

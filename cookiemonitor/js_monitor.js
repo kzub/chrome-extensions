@@ -1,9 +1,9 @@
 console.clear();
-console.warn("cookie monitoring started");
+console.warn("PAGE: cookie monitoring started");
 
 let a = document.createElement('script');
 a.innerHTML = `
-var cookieToLookfor = ['referrer', 'accept_language'];
+var cookieToLookfor = ['rheftjdd', 'accept_language'];
 function breakOn(obj, propertyName, mode, func) {
     function getPropertyDescriptor(obj, name) {
         var property = Object.getOwnPropertyDescriptor(obj, name);

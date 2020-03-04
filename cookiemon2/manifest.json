@@ -1,0 +1,26 @@
+{
+   "author": "Shahul Hameed, N",
+   "background": {
+      "persistent": true,
+      "scripts": [ "cookiemon-background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon19.png",
+         "38": "images/icon38.png"
+      },
+      "default_title": "Cookie Monitor"
+   },
+   "description": "This extension monitors the cookies addition and deletion",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2gxJ1sBSlxHkvv+Ppqv0F6Yh38bTvTRm2FgslsD8vYvInHx2X5GH5eS9uTZQspqpAPgioXCZlZmi8C/MDecrzKVZKbaOkcuhUZurJZ+MMbVo/nU/bpBGFuaiag8hmS5uJq5MyM9VrvX3kaQnGncXxOynEi2LoDX3dph5tqXCh6DQOaUr1lxv92F9ne7Rwu8myv2hiUL8KJYup2Tw4N8Mr+AZZpm+qy/jAp64wF8NZe/UKRd0A5+YktrTvonKOf/R28sOU+L3Q3gzrJRuiavTkI80DVlyLR9mOKg/5C7++OOrryektFzST3RNYWOXPOCbAyC8nexH1Ughk5XttNy+zwIDAQAB",
+   "manifest_version": 2,
+   "name": "Cookie Monitor",
+   "permissions": [ "tabs", "cookies", "storage", "webRequest", "https://*/*", "http://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

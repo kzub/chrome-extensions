@@ -1,7 +1,7 @@
 console.clear()
-console.log('Cookie monitor started')
+console.log('REQ: Cookie monitoring started')
 
-var cookieToLookfor = ['referrer', 'accept_language'];
+var cookieToLookfor = ['rheftjdd', 'accept_language'];
 
 chrome.webRequest.onHeadersReceived.addListener(function(details){
   if(details.responseHeaders) {       
